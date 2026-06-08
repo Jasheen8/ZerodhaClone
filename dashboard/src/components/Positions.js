@@ -1,8 +1,19 @@
 import React from "react";
-
+import axios, { all } from "axios";
 import { positions } from "../data/data";
 
 const Positions = () => {
+  const [positions, setPositions] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://zerodhaclone-7eo3.onrender.com/allPositions")
+      .then((res) => {
+        setPositions(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+  
   return (
     <>
       <h3 className="title">Positions ({positions.length})</h3>
