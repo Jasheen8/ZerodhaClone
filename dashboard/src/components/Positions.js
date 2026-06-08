@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
 import { positions } from "../data/data";
 
@@ -13,7 +13,7 @@ const Positions = () => {
       })
       .catch((err) => console.error(err));
   }, []);
-  
+
   return (
     <>
       <h3 className="title">Positions ({positions.length})</h3>
