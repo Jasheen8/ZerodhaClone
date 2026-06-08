@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
-import { positions } from "../data/data";
+
 
 const Positions = () => {
   const [positions, setPositions] = useState([]);
