@@ -12,7 +12,7 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-    axios.post("http://zerodhaclone-7eo3.onrender.com/newOrder", {
+    axios.post("https://zerodhaclone-7eo3.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
